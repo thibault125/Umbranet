@@ -1,0 +1,38 @@
+:root {
+    --primary-color: #FF6B35;
+    --secondary-color: #4ECDC4;
+    --accent-color: #45B7D1;
+    --success-color: #27AE60;
+    --warning-color: #F39C12;
+    --danger-color: #E74C3C;
+    --dark-color: #2C3E50;
+    --light-color: #ECF0F1;
+    --white: #FFFFFF;
+    --black: #000000;
+
+    --comic-red: #FF0000;
+    --comic-blue: #0066CC;
+    --comic-yellow: #FFD700;
+    --comic-green: #00CC66;
+    --comic-purple: #CC00CC;
+    
+    --font-comic: 'Comic Neue', cursive;
+    --font-bangers: 'Bangers', cursive;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-comic);
+    background: linear-gradient(135deg, #0f0f23 0%, #1a1a3e 50%, #2d1b69 100%);
+    min-height: 100vh;
+    width: 100%;
+    color: var(--dark-color);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}

@@ -1,0 +1,258 @@
+/* Fichier: src/pages/HomePage/HomePage.css */
+
+/* Styles généraux */
+body {
+  margin: 0;
+  background-color: #0f0f23; /* Nouveau fond sombre */
+  font-family: Arial, sans-serif;
+  color: #b8c5d6; /* Couleur de texte adaptée au fond sombre */
+}
+
+.main-layout {
+  display: flex;
+  min-height: 100vh;
+  /* Nouveau fond dégradé et effets lumineux */
+  background: linear-gradient(135deg, #0f0f23 0%, #1a1a3e 50%, #2d1b69 100%);
+  background-attachment: fixed;
+  position: relative;
+}
+
+.main-layout::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.3) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(255, 119, 198, 0.3) 0%, transparent 50%),
+    radial-gradient(circle at 40% 40%, rgba(120, 219, 255, 0.2) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Barre latérale (Actualité de l'Ombre) - Styles inchangés */
+.sidebar {
+  width: 350px;
+  background-color: #1a1a1a;
+  color: #00e6e6;
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.umbranet-logo-sidebar {
+  width: 80px;
+  height: auto;
+  margin-bottom: 10px;
+  filter: drop-shadow(0 0 5px #00e6e6);
+}
+
+.sidebar-title {
+  font-size: 1.5em;
+  margin-top: 5px;
+  letter-spacing: 2px;
+  color: #00e6e6;
+}
+
+.news-categories {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.category-link {
+  color: #00e6e6;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.9em;
+  padding: 5px 10px;
+  border-bottom: 2px solid transparent;
+  transition: border-bottom 0.3s ease, color 0.3s ease;
+}
+
+.category-link:hover {
+  border-bottom: 2px solid #00e6e6;
+  color: #00ffff;
+}
+
+.news-section {
+  flex-grow: 1;
+  margin-bottom: 30px;
+}
+
+.news-section h3 {
+  color: #00e6e6;
+  font-size: 1.2em;
+  margin-bottom: 15px;
+  text-align: left;
+  letter-spacing: 1px;
+}
+
+.news-item {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.news-item h4 {
+  color: #d0d0d0;
+  font-size: 0.9em;
+  line-height: 1.4;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+}
+
+.news-item p {
+  color: #888;
+  font-size: 0.7em;
+  margin: 0;
+}
+
+.partnership-section {
+  border-top: 1px solid #333;
+  padding-top: 20px;
+  text-align: left;
+}
+
+.partnership-section h3 {
+  color: #00e6e6;
+  font-size: 1.2em;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+}
+
+.partnership-card {
+  display: flex;
+  align-items: center;
+  background-color: #2a2a2a;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.evilmatch-logo {
+  width: 60px;
+  height: 60px;
+  margin-right: 15px;
+  border-radius: 5px;
+}
+
+.partnership-text h4 {
+  color: #d0d0d0;
+  font-size: 0.9em;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.partnership-text p {
+  color: #888;
+  font-size: 0.7em;
+  margin: 0;
+}
+
+/* Contenu principal - Les parties blanches sont modifiées ici */
+.home-content {
+  flex-grow: 1;
+  background-color: transparent; /* Remplace le blanc par un fond transparent */
+  padding: 0;
+}
+
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 60vh;
+  background-color: transparent; /* Remplace le blanc par un fond transparent */
+  padding: 2rem;
+}
+
+.hero-section h1 {
+  font-size: 3rem;
+  /* Nouveau dégradé pour le titre */
+  background: linear-gradient(45deg, #4ecdc4, #45b7d1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 0.5rem;
+  font-weight: 800;
+  text-shadow: 0 0 20px rgba(78, 205, 196, 0.5);
+}
+
+.hero-section p {
+  font-size: 1.5rem;
+  color: #b8c5d6; /* Couleur de texte adaptée */
+  margin-bottom: 1.5rem;
+}
+
+.cta-button {
+  /* Nouveau style pour le bouton */
+  background: linear-gradient(45deg, #ff6b6b, #ff8e8e);
+  color: white;
+  padding: 1rem 2.5rem;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4);
+  text-decoration: none; /* ⬅️ Ligne ajoutée pour enlever le soulignement */
+}
+
+.cta-button:hover {
+  background: linear-gradient(45deg, #ff8e8e, #ff6b6b);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 107, 107, 0.6);
+}
+
+.villain-profiles-section {
+  padding: 4rem 2rem;
+  background-color: transparent; /* Remplace le blanc par un fond transparent */
+  text-align: center;
+}
+
+.villain-profiles-section h2 {
+  color: #4ecdc4; /* Couleur de titre adaptée */
+}
+
+.profile-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.profile-card {
+  /* Nouveau style pour les cartes */
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 
+    0 4px 6px rgba(0, 0, 0, 0.1);
+  border-top: 5px solid #ff4500;
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 
+    0 8px 15px rgba(0, 0, 0, 0.4),
+    0 0 20px rgba(255, 107, 107, 0.3);
+}
+
+.profile-card h3 {
+  color: #d0d0d0; /* Couleur de texte adaptée */
+  margin-bottom: 0.5rem;
+}
